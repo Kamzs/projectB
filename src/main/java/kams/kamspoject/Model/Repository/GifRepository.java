@@ -20,6 +20,11 @@ public class GifRepository
 
     );
 
+    public List<Gif> getAllGifs()
+    {
+        return ALL_GIFS;
+    }
+
     public String returnNames ()
     {
         String names = "";

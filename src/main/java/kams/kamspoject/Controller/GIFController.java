@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 @Controller
 public class GIFController
 {
@@ -21,6 +23,16 @@ public class GIFController
     public String reponseGetShow()
     {
         return gifRepository.returnNames();
+    }
+
+    @GetMapping("/Gifobject")
+    @ResponseBody
+    public String reponseGetGifobjects()
+    {
+        //1. pobranie gifów do listy
+        List<Gif> gifList = gifRepository.getAllGifs();
+        //2. zwrócenie widoku
+        return gifRepository.getAllGifs().toString();
     }
 
 }
