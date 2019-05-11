@@ -14,4 +14,32 @@ public class MainController
         return "Categories";
     }
 
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String ansewerGet ()
+    {
+        return "Category";
+    }
+
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String ansewerGet ()
+    {
+        return "Favourites";
+    }
+
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String ansewerGet ()
+    {
+        return "Gif-getails";
+    }
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String ansewerGet ()
+    {
+        return "Gif-getails";
+    }
+
+
 }
