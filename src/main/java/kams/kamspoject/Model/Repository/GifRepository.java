@@ -13,12 +13,12 @@ import java.util.List;
 public class GifRepository
 {
     private static List<Gif> ALL_GIFS = Arrays.asList(
-            new Gif("android-explosion","sad",true, 0),
-            new Gif("ben-and-mike","dsa",false, 0),
-            new Gif("book-dominos","ewq",true, 0),
-            new Gif("compiler-bot","freq",false, 1),
-            new Gif("cowboy-coder","qaz",false, 2),
-            new Gif("infinite-andrew","deca",true, 2)
+            new Gif("android-explosion", "sad", true, 0),
+            new Gif("ben-and-mike", "dsa", false, 0),
+            new Gif("book-dominos", "ewq", true, 0),
+            new Gif("compiler-bot", "freq", false, 1),
+            new Gif("cowboy-coder", "qaz", false, 2),
+            new Gif("infinite-andrew", "deca", true, 2)
 
     );
 
@@ -33,8 +33,8 @@ public class GifRepository
 
         for (int i = 0; i < ALL_GIFS.size(); i++)
         {
-            if (ALL_GIFS.get(i).getFavorite()==true)
-            onlyFavorited.add(ALL_GIFS.get(i));
+            if (ALL_GIFS.get(i).getFavorite() == true)
+                onlyFavorited.add(ALL_GIFS.get(i));
         }
 
         return onlyFavorited;
@@ -47,21 +47,33 @@ public class GifRepository
 
         for (int i = 0; i < ALL_GIFS.size(); i++)
         {
-            if (ALL_GIFS.get(i).getCategoryID()==numberCategory)
+            if (ALL_GIFS.get(i).getCategoryID() == numberCategory)
                 withCategory0.add(ALL_GIFS.get(i));
         }
 
         return withCategory0;
     }
 
-    public String returnNames ()
+    public String returnNames()
     {
         String names = "";
-        for (Gif gif :ALL_GIFS )
+        for (Gif gif : ALL_GIFS)
         {
             names += gif.getName();
         }
-        return  names;
+        return names;
     }
 
+    public Gif getGifByName(String name)
+    {
+        for (Gif gif : ALL_GIFS)
+
+            if (name.equals(gif.getName()))
+            {
+                return gif;
+            }
+
+                return null;
+
+    }
 }
