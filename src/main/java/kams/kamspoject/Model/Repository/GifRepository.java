@@ -2,7 +2,9 @@ package kams.kamspoject.Model.Repository;
 
 import kams.kamspoject.Model.Gif;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.RequestBody;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -23,6 +25,19 @@ public class GifRepository
     public List<Gif> getAllGifs()
     {
         return ALL_GIFS;
+    }
+
+    public List<Gif> getFavorited()
+    {
+        List<Gif> onlyFavorited = new ArrayList<>();
+
+        for (int i = 0; i < ALL_GIFS.size(); i++)
+        {
+            if (ALL_GIFS.get(i).getFavorite()==true)
+            onlyFavorited.add(ALL_GIFS.get(i));
+        }
+
+        return onlyFavorited;
     }
 
     public String returnNames ()

@@ -5,13 +5,13 @@ public class Gif
 {
     private String name;
     private String username;
-    private Boolean isFavuorited;
+    private Boolean Favorite;
 
     public Gif(String name, String username, Boolean isFavuorited)
     {
         this.name = name;
         this.username = username;
-        this.isFavuorited = isFavuorited;
+        this.Favorite = isFavuorited;
     }
 
 
@@ -35,14 +35,14 @@ public class Gif
         this.username = username;
     }
 
-    public Boolean getFavuorited()
+    public Boolean getFavorite()
     {
-        return isFavuorited;
+        return Favorite;
     }
 
-    public void setFavuorited(Boolean favuorited)
+    public void setFavorite(Boolean favuorited)
     {
-        isFavuorited = favuorited;
+        Favorite = favuorited;
     }
 
 
