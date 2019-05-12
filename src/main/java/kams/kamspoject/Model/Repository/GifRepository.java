@@ -13,12 +13,12 @@ import java.util.List;
 public class GifRepository
 {
     private static List<Gif> ALL_GIFS = Arrays.asList(
-            new Gif("android-explosion","sad",true),
-            new Gif("ben-and-mike","dsa",false),
-            new Gif("book-dominos","ewq",true),
-            new Gif("compiler-bot","freq",false),
-            new Gif("cowboy-coder","qaz",false),
-            new Gif("infinite-andrew","deca",true)
+            new Gif("android-explosion","sad",true, 0),
+            new Gif("ben-and-mike","dsa",false, 0),
+            new Gif("book-dominos","ewq",true, 0),
+            new Gif("compiler-bot","freq",false, 1),
+            new Gif("cowboy-coder","qaz",false, 2),
+            new Gif("infinite-andrew","deca",true, 2)
 
     );
 
@@ -38,6 +38,20 @@ public class GifRepository
         }
 
         return onlyFavorited;
+    }
+
+
+    public List<Gif> getGifsyCategoryID(int numberCategory)
+    {
+        List<Gif> withCategory0 = new ArrayList<>();
+
+        for (int i = 0; i < ALL_GIFS.size(); i++)
+        {
+            if (ALL_GIFS.get(i).getCategoryID()==numberCategory)
+                withCategory0.add(ALL_GIFS.get(i));
+        }
+
+        return withCategory0;
     }
 
     public String returnNames ()

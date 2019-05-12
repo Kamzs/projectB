@@ -22,4 +22,9 @@ public class CategoryRepository
     {
         return ALL_CATEGORIES;
     }
+
+    public Category getCategoryByID(int id)
+    {
+        return ALL_CATEGORIES.get(id);
+    }
 }

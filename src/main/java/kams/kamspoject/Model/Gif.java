@@ -6,14 +6,26 @@ public class Gif
     private String name;
     private String username;
     private Boolean Favorite;
+    private int categoryID;
 
-    public Gif(String name, String username, Boolean isFavuorited)
+
+    public Gif(String name, String username, Boolean isFavuorited, int categoryID)
     {
         this.name = name;
         this.username = username;
         this.Favorite = isFavuorited;
+        this.categoryID = categoryID;
     }
 
+    public int getCategoryID()
+    {
+        return categoryID;
+    }
+
+    public void setCategoryID(int categoryID)
+    {
+        this.categoryID = categoryID;
+    }
 
     public String getName()
     {
