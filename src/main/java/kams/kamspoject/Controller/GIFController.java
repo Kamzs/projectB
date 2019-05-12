@@ -25,7 +25,7 @@ public class GIFController
         return gifRepository.returnNames();
     }
 
-    @GetMapping("/home")
+    @GetMapping("/")
     public String reponseGetGifobjects(ModelMap modelMap)
     {
         //1. pobranie gifów do listy
