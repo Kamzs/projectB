@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" th:href="@{/app.css}" />
 
-    <title th:text="'giflib | ' + ${gif.name}">Kwejk</title>
+    <title>giflib | Home</title>
 </head>
 <body>
     <div class="navbar-fixed">
@@ -35,29 +35,11 @@
     <div class="gif-detail container">
         <div class="frame row">
             <div class="col s12">
-                <img th:src="@{'/gifs/' + ${gif.name} + '.gif'}" alt="gif" />
-                <a href="#" th:class="(${gif.favorite} ? 'un' : '') + 'mark favorite'"></a>
+                <h1> Frank Underwood mówi, że takiego mema nie mamy</h1>
+                <img th:src="@{'/gifs/nogif.jpg'}" alt="gif" />
+
             </div>
         </div>
-        <div class="row">
-            <div class="col s12 l6">
-                <div class="meta row">
-                    <div class="col s3">
-                        <img class="circle" src="http://api.adorable.io/avatars/205/avatar" alt="avatar" />
-                    </div>
-                    <div class="col s9">
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 l6">
-                <div class="share">
-                    <a class="btn right" href="#">Copy</a>
-                    <span th:text="'http://gif.fy/' + ${gif.name}">URL</span>
-                </div>
-            </div>
-        </div>
-    </div>
 
 <script th:src="@{/vendor/jquery/jquery-1.11.3.js}"></script>
 <script th:src="@{/vendor/materialize/js/materialize.js}"></script>

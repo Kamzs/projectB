@@ -34,7 +34,7 @@
     <div class="search-bar container">
         <div class="row">
             <div class="col s12">
-                <form action="#" method="get">
+                <form action="#" method="post">
                     <div class="input-field">
                         <input name="q" type="search" placeholder="Wyszukiwanie..." required="required" autocomplete="off"/>
                         <i class="material-icons">search</i>
@@ -45,7 +45,7 @@
     </div>
     <div class="gifs container">
         <div class="row">
-           <div th:each="gif : ${gifs}" class="col s6 14">
+           <div th:each="gif : ${gifs}" class="col s4 14">
                <a th:href="@{'gif/' + ${gif.name}}">
                    <img th:src="@{'/gifs/' + ${gif.name} + '.gif'}">
                    <!--Czy jest ulubiony?-->

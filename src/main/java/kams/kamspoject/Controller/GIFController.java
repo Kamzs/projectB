@@ -6,10 +6,7 @@ import kams.kamspoject.Model.Repository.GifRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,12 +17,15 @@ public class GIFController
     @Autowired
     GifRepository gifRepository;
 
+/*
     @GetMapping("/show")
     @ResponseBody
     public String reponseGetShow()
     {
         return gifRepository.returnNames();
     }
+
+*/
 
     @GetMapping("/")
     public String reponseGetGifobjects(ModelMap modelMap)
@@ -39,6 +39,7 @@ public class GIFController
         //3. zwrócenie widoku
         return "home";
     }
+
 
     @GetMapping("/favorites")
     public String reponseGetFavourites(ModelMap modelMap)
@@ -59,5 +60,8 @@ public class GIFController
         modelMap.put("gif",gif);
         return "gif-details";
     }
+
+
+
 
 }
