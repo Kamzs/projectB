@@ -2,8 +2,6 @@ package kams.kamspoject.Model.Repository;
 
 import kams.kamspoject.Model.Gif;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.RequestBody;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

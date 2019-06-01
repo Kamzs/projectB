@@ -1,5 +1,7 @@
 package kams.kamspoject.Model;
 
+import org.springframework.context.annotation.Bean;
+
 
 public class Category
 {
